@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resultados</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        .result-card {
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 16px;
+            margin-bottom: 24px;
+        }
+        .card-header {
+            font-size: 18px;
+            font-weight: 600;
+            color: var(--text-secondary);
+            margin-bottom: 8px;
+        }
+        .main-value {
+            font-size: 32px;
+            font-weight: bold;
+            margin-bottom: 4px;
+        }
+        .change-info {
+            color: var(--primary-green);
+            font-weight: bold;
+            margin-left: 8px;
+        }
+        .chart-container {
+            display: flex;
+            justify-content: space-around;
+            align-items: flex-end;
+            height: 100px;
+            margin-top: 20px;
+        }
+        .chart-bar {
+            width: 15px;
+            background-color: var(--border-color);
+            border-radius: 4px 4px 0 0;
+            transition: height 0.3s;
+        }
+        .chart-bar.current {
+            background-color: var(--primary-green);
+        }
+        .chart-label {
+            font-size: 12px;
+            color: var(--text-secondary);
+            margin-top: 4px;
+        }
+        .card-footer {
+            margin-top: 16px;
+            padding-top: 16px;
+            border-top: 1px solid var(--border-color);
+            font-size: 14px;
+            color: var(--text-secondary);
+        }
+    </style>
+</head>
+<body>
+    <div class="app-bar">
+        <i class="fas fa-arrow-left back-icon" onclick="history.back()"></i>
+        <div class="title">Resultados</div>
+    </div>
+
+    <div class="screen-container">
+        <h2 class="section-title" style="margin-top: 0;">Consumo de Energia</h2>
+
+        <div class="result-card">
+            <div class="card-header">Consumo de Energia (kWh/mês)</div>
+            <div class="main-value">250 kWh</div>
+            <p>Mês Atual <span class="change-info">+10%</span></p>
+            <div class="chart-container">
+                <div style="text-align: center;">
+                    <div class="chart-bar" style="height: 60px;"></div>
+                    <div class="chart-label">Jan</div>
+                </div>
+                <div style="text-align: center;">
+                    <div class="chart-bar" style="height: 75px;"></div>
+                    <div class="chart-label">Fev</div>
+                </div>
+                <div style="text-align: center;">
+                    <div class="chart-bar current" style="height: 90px;"></div>
+                    <div class="chart-label">Mar</div>
+                </div>
+                <div style="text-align: center;">
+                    <div class="chart-bar" style="height: 50px;"></div>
+                    <div class="chart-label">Abr</div>
+                </div>
+                <div style="text-align: center;">
+                    <div class="chart-bar" style="height: 65px;"></div>
+                    <div class="chart-label">Mai</div>
+                </div>
+                <div style="text-align: center;">
+                    <div class="chart-bar" style="height: 80px;"></div>
+                    <div class="chart-label">Jun</div>
+                </div>
+            </div>
+        </div>
+
+        <h2 class="section-title">Gasto Estimado</h2>
+        <div class="result-card">
+            <div class="card-header">Gasto Estimado (R$)</div>
+            <div class="main-value">R$ 150</div>
+            <p>Mês Atual <span class="change-info">+5%</span></p>
+            <div class="chart-container">
+                </div>
+        </div>
+
+        <h2 class="section-title">Impacto Ambiental</h2>
+        <div class="result-card">
+            <div class="card-header">Emissão de CO2 (kg)</div>
+            <div class="main-value">120 kg</div>
+            <p>Mês Atual <span class="change-info">+8%</span></p>
+            <div class="chart-container">
+                </div>
+            <div class="card-footer">
+                Para compensar essa emissão, você poderia plantar 3 árvores.
+            </div>
+        </div>
+
+    </div>
+
+    <div class="bottom-nav">
+        <div class="nav-item">
+            <i class="fas fa-home"></i>
+            <span>Início</span>
+        </div>
+        <div class="nav-item active">
+            <i class="fas fa-chart-bar"></i>
+            <span>Resultados</span>
+        </div>
+        <div class="nav-item">
+            <i class="fas fa-history"></i>
+            <span>Histórico</span>
+        </div>
+        <div class="nav-item">
+            <i class="fas fa-cog"></i>
+            <span>Configurações</span>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

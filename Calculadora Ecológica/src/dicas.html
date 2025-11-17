@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dicas de Economia</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        .tip-list-item {
+            display: flex;
+            align-items: center;
+            padding: 12px 0;
+            border-bottom: 1px solid var(--background-light);
+        }
+        .tip-list-item:last-child {
+            border-bottom: none;
+        }
+        .tip-icon-wrapper { 
+            background-color: var(--background-light); 
+            padding: 12px; 
+            border-radius: 10px; 
+            margin-right: 16px; 
+        }
+        .tip-icon { font-size: 28px; color: var(--text-color); }
+        .tip-content { flex-grow: 1; }
+        .tip-title { font-weight: bold; margin: 0; }
+        .tip-economy { color: var(--text-secondary); font-size: 14px; margin: 0; }
+    </style>
+</head>
+<body>
+    <div class="app-bar">
+        <i class="fas fa-arrow-left back-icon" onclick="history.back()"></i>
+        <div class="title">Dicas de Economia</div>
+    </div>
+
+    <div class="screen-container">
+        <h2 class="section-title" style="margin-top: 0;">Dicas Personalizadas</h2>
+        
+        <div class="tip-list-item">
+            <div class="tip-icon-wrapper"><i class="far fa-lightbulb tip-icon"></i></div>
+            <div class="tip-content">
+                <p class="tip-title">Troque lâmpadas incandescentes por</p>
+                <p class="tip-economy">Economia de 15 kWh/mês</p>
+            </div>
+        </div>
+
+        <div class="tip-list-item">
+            <div class="tip-icon-wrapper"><i class="fas fa-plug tip-icon"></i></div>
+            <div class="tip-content">
+                <p class="tip-title">Desligue aparelhos da tomada quando</p>
+                <p class="tip-economy">Economia de 10 kWh/mês</p>
+            </div>
+        </div>
+        
+        <div class="tip-list-item">
+            <div class="tip-icon-wrapper"><i class="fas fa-tint tip-icon"></i></div>
+            <div class="tip-content">
+                <p class="tip-title">Utilize a máquina de lavar com carga</p>
+                <p class="tip-economy">Economia de 20 kWh/mês</p>
+            </div>
+        </div>
+        
+        <div class="tip-list-item">
+            <div class="tip-icon-wrapper"><i class="far fa-sun tip-icon"></i></div>
+            <div class="tip-content">
+                <p class="tip-title">Aproveite a luz natural durante o dia</p>
+                <p class="tip-economy">Economia de 5 kWh/mês</p>
+            </div>
+        </div>
+
+        <div class="tip-list-item">
+            <div class="tip-icon-wrapper"><i class="fas fa-temperature-low tip-icon"></i></div>
+            <div class="tip-content">
+                <p class="tip-title">Regule a temperatura da geladeira e</p>
+                <p class="tip-economy">Economia de 25 kWh/mês</p>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="bottom-nav">
+        <div class="nav-item active">
+            <i class="fas fa-home"></i>
+            <span>Início</span>
+        </div>
+        <div class="nav-item">
+            <i class="fas fa-chart-bar"></i>
+            <span>Resultados</span>
+        </div>
+        <div class="nav-item">
+            <i class="fas fa-history"></i>
+            <span>Histórico</span>
+        </div>
+        <div class="nav-item">
+            <i class="fas fa-cog"></i>
+            <span>Configurações</span>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

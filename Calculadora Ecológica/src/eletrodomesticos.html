@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eletrodomésticos</title>
+    
+    <link rel="stylesheet" href="styles.css">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
+    <style>
+        /* Estilos específicos para esta tela */
+        .appliance-item { 
+            margin-bottom: 24px; 
+        }
+        .appliance-header { 
+            display: flex; 
+            align-items: center; 
+            justify-content: space-between; 
+            margin-bottom: 8px; 
+        }
+        .appliance-info { 
+            display: flex; 
+            align-items: center; 
+        }
+        .appliance-icon-wrapper { 
+            background-color: var(--background-light); 
+            padding: 12px; 
+            border-radius: 10px; 
+            margin-right: 16px; 
+        }
+        .appliance-icon { 
+            font-size: 28px; 
+            color: var(--text-color); 
+        }
+        .appliance-details h4 { 
+            margin: 0; 
+            font-weight: bold; 
+        }
+        .appliance-details p { 
+            margin: 0; 
+            color: var(--text-secondary); 
+            font-size: 14px; 
+        }
+        .time-label { 
+            font-weight: 600; 
+            margin-bottom: 4px; 
+        }
+        .progress-bar-container { 
+            height: 4px; 
+            background-color: var(--border-color); 
+            border-radius: 2px; 
+        }
+        .progress-bar { 
+            height: 100%; 
+            background-color: var(--primary-green); 
+            border-radius: 2px; 
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="app-bar">
+        <i class="fas fa-arrow-left back-icon" data-back-route="iluminacao"></i>
+        <div class="title">Consumo de Energia</div>
+    </div>
+
+    <div class="screen-container">
+        
+        <h2 class="section-title" style="margin-top: 0;">Eletrodomésticos</h2>
+
+        <div class="appliance-item">
+            <div class="appliance-header">
+                <div class="appliance-info">
+                    <div class="appliance-icon-wrapper"><i class="fas fa-shower appliance-icon"></i></div>
+                    <div class="appliance-details">
+                        <h4>Chuveiro</h4>
+                        <p>Tempo de uso diário</p>
+                    </div>
+                </div>
+                <span style="font-weight: bold;">30 min</span>
+            </div>
+            <div class="time-label">Tempo de uso</div>
+            <div class="progress-bar-container"><div class="progress-bar" style="width: 50%;"></div></div>
+        </div>
+
+        <div class="appliance-item">
+            <div class="appliance-header">
+                <div class="appliance-info">
+                    <div class="appliance-icon-wrapper"><i class="fas fa-thermometer-half appliance-icon"></i></div>
+                    <div class="appliance-details">
+                        <h4>Geladeira</h4>
+                        <p>Tempo de uso diário</p>
+                    </div>
+                </div>
+                <span style="font-weight: bold;">24 horas</span>
+            </div>
+            <div class="time-label">Tempo de uso</div>
+            <div class="progress-bar-container"><div class="progress-bar" style="width: 100%;"></div></div>
+        </div>
+
+        <div class="appliance-item">
+            <div class="appliance-header">
+                <div class="appliance-info">
+                    <div class="appliance-icon-wrapper"><i class="fas fa-washing-machine appliance-icon"></i></div>
+                    <div class="appliance-details">
+                        <h4>Máquina de Lavar</h4>
+                        <p>Tempo de uso diário</p>
+                    </div>
+                </div>
+                <span style="font-weight: bold;">1 hora</span>
+            </div>
+            <div class="time-label">Tempo de uso</div>
+            <div class="progress-bar-container"><div class="progress-bar" style="width: 80%;"></div></div>
+        </div>
+        
+        <div class="appliance-item">
+            <div class="appliance-header">
+                <div class="appliance-info">
+                    <div class="appliance-icon-wrapper"><i class="fas fa-wifi appliance-icon"></i></div>
+                    <div class="appliance-details">
+                        <h4>Micro-ondas</h4>
+                        <p>Tempo de uso diário</p>
+                    </div>
+                </div>
+                <span style="font-weight: bold;">15 min</span>
+            </div>
+            <div class="time-label">Tempo de uso</div>
+            <div class="progress-bar-container"><div class="progress-bar" style="width: 25%;"></div></div>
+        </div>
+
+        <button class="button-primary" data-next-screen="resultados">Próximo</button>
+        
+    </div>
+
+    <div class="bottom-nav">
+        <div class="nav-item" data-route="home">
+            <i class="fas fa-home"></i>
+            <span>Início</span>
+        </div>
+        <div class="nav-item" data-route="resultados">
+            <i class="fas fa-chart-bar"></i>
+            <span>Resultados</span>
+        </div>
+        <div class="nav-item" data-route="historico">
+            <i class="fas fa-history"></i>
+            <span>Histórico</span>
+        </div>
+        <div class="nav-item" data-route="configuracoes">
+            <i class="fas fa-cog"></i>
+            <span>Configurações</span>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+    
+</body>
+</html>

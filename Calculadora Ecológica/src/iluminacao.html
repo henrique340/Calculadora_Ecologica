@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iluminação</title>
+    
+    <link rel="stylesheet" href="styles.css">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        /* Estilos específicos para esta tela */
+        .input-group { margin-bottom: 20px; }
+        .input-row { display: flex; justify-content: space-between; align-items: center; margin-top: 8px; }
+        .stepper-control { display: flex; align-items: center; }
+        .stepper-btn { 
+            width: 30px; height: 30px; border: 1px solid var(--border-color); 
+            border-radius: 50%; display: flex; justify-content: center; 
+            align-items: center; cursor: pointer; color: var(--text-secondary); 
+            font-weight: bold; font-size: 16px; 
+            margin: 0 5px; /* Adicionado margem para espaçamento entre botões/valor */
+        }
+        .stepper-value { width: 40px; text-align: center; font-weight: bold; }
+    </style>
+</head>
+<body>
+    
+    <div class="app-bar">
+        <i class="fas fa-arrow-left back-icon" data-back-route="home"></i>
+        <div class="title">Consumo de Energia</div>
+    </div>
+
+    <div class="screen-container">
+        
+        <h2 class="section-title" style="margin-top: 0;">Iluminação</h2>
+        <p style="color: var(--text-secondary); margin-bottom: 30px;">
+            Informe a quantidade e o tempo de uso diário de cada tipo de lâmpada em sua residência.
+        </p>
+
+        <h3 style="font-size: 18px; font-weight: bold; margin-bottom: 10px;">Lâmpadas Incandescentes</h3>
+        <div class="input-group">
+            <div class="input-row">
+                <span>Quantidade</span>
+                <div class="stepper-control">
+                    <div class="stepper-btn" data-action="minus">-</div>
+                    <span class="stepper-value">0</span>
+                    <div class="stepper-btn" data-action="plus">+</div>
+                </div>
+            </div>
+            <div class="input-row">
+                <span>Tempo de uso diário (horas)</span>
+                <div class="stepper-control">
+                    <div class="stepper-btn" data-action="minus">-</div>
+                    <span class="stepper-value">0</span>
+                    <div class="stepper-btn" data-action="plus">+</div>
+                </div>
+            </div>
+        </div>
+
+        <h3 style="font-size: 18px; font-weight: bold; margin-bottom: 10px;">Lâmpadas Fluorescentes</h3>
+        <div class="input-group">
+            <div class="input-row">
+                <span>Quantidade</span>
+                <div class="stepper-control">
+                    <div class="stepper-btn" data-action="minus">-</div>
+                    <span class="stepper-value">0</span>
+                    <div class="stepper-btn" data-action="plus">+</div>
+                </div>
+            </div>
+            <div class="input-row">
+                <span>Tempo de uso diário (horas)</span>
+                <div class="stepper-control">
+                    <div class="stepper-btn" data-action="minus">-</div>
+                    <span class="stepper-value">0</span>
+                    <div class="stepper-btn" data-action="plus">+</div>
+                </div>
+            </div>
+        </div>
+
+        <h3 style="font-size: 18px; font-weight: bold; margin-bottom: 10px;">Lâmpadas LED</h3>
+        <div class="input-group">
+            <div class="input-row">
+                <span>Quantidade</span>
+                <div class="stepper-control">
+                    <div class="stepper-btn" data-action="minus">-</div>
+                    <span class="stepper-value">0</span>
+                    <div class="stepper-btn" data-action="plus">+</div>
+                </div>
+            </div>
+            <div class="input-row">
+                <span>Tempo de uso diário (horas)</span>
+                <div class="stepper-control">
+                    <div class="stepper-btn" data-action="minus">-</div>
+                    <span class="stepper-value">0</span>
+                    <div class="stepper-btn" data-action="plus">+</div>
+                </div>
+            </div>
+        </div>
+        
+        <button class="button-primary" data-next-screen="eletrodomesticos">Próximo</button>
+        
+    </div>
+
+    <div class="bottom-nav">
+        <div class="nav-item active" data-route="home">
+            <i class="fas fa-home"></i>
+            <span>Início</span>
+        </div>
+        <div class="nav-item" data-route="resultados">
+            <i class="fas fa-chart-bar"></i>
+            <span>Resultados</span>
+        </div>
+        <div class="nav-item" data-route="historico">
+            <i class="fas fa-history"></i>
+            <span>Histórico</span>
+        </div>
+        <div class="nav-item" data-route="configuracoes">
+            <i class="fas fa-cog"></i>
+            <span>Configurações</span>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+    
+</body>
+</html>

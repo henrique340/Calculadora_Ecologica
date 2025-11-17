@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Descubra Seu Consumo</title>
+    
+    <link rel="stylesheet" href="styles.css">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    
+    <div class="screen-container" style="display: flex; flex-direction: column; align-items: center; text-align: center;">
+        
+        <h1 style="font-size: 28px; margin-top: 50px;">Descubra seu consumo de energia</h1>
+        <p style="font-size: 16px; color: var(--text-secondary); margin-bottom: 50px;">
+            Calcule seu impacto ambiental e descubra como economizar energia em casa e no transporte.
+        </p>
+
+        <img src="assets/lampada.png" 
+     alt="Ilustração de consumo de energia com elementos ecológicos"
+     style="width: 250px; height: 250px; object-fit: contain; margin-bottom: auto; border-radius: 12px; background-color: var(--background-light); padding: 10px;">
+
+        <button class="button-primary" data-next-screen="iluminacao">Começar</button>
+        
+    </div>
+
+    <div class="bottom-nav">
+        <div class="nav-item active" data-route="home">
+            <i class="fas fa-home"></i>
+            <span>Início</span>
+        </div>
+        <div class="nav-item" data-route="resultados">
+            <i class="fas fa-chart-bar"></i>
+            <span>Resultados</span>
+        </div>
+        <div class="nav-item" data-route="historico">
+            <i class="fas fa-history"></i>
+            <span>Histórico</span>
+        </div>
+        <div class="nav-item" data-route="configuracoes">
+            <i class="fas fa-cog"></i>
+            <span>Configurações</span>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+    
+</body>
+</html>

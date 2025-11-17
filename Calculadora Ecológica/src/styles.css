@@ -1,0 +1,99 @@
+:root {
+    --primary-green: #38C172;
+    --background-light: #f9f9f9;
+    --text-color: #333;
+    --text-secondary: #666;
+    --border-color: #ddd;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: white;
+    color: var(--text-color);
+}
+
+.screen-container {
+    padding: 24px;
+    padding-bottom: 90px; /* Espaço para a barra de navegação */
+    min-height: calc(100vh - 90px);
+}
+
+/* --- AppBar --- */
+.app-bar {
+    display: flex;
+    align-items: center;
+    padding: 16px 24px;
+    border-bottom: 1px solid var(--border-color);
+    background-color: white;
+    font-weight: 600;
+}
+
+.app-bar .back-icon {
+    font-size: 24px;
+    margin-right: 16px;
+    color: var(--text-color);
+    cursor: pointer;
+}
+
+.app-bar .title {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+/* --- Botão Principal --- */
+.button-primary {
+    width: 100%;
+    padding: 16px;
+    background-color: var(--primary-green);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 24px;
+}
+
+/* --- Bottom Navigation Bar --- */
+.bottom-nav {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 80px;
+    background-color: white;
+    border-top: 1px solid var(--border-color);
+    z-index: 1000;
+}
+
+.nav-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: var(--text-secondary);
+    font-size: 12px;
+    cursor: pointer;
+}
+
+.nav-item i {
+    font-size: 24px;
+    margin-bottom: 4px;
+}
+
+.nav-item.active {
+    color: var(--primary-green);
+    font-weight: bold;
+}
+
+/* Classe para os títulos de seção */
+.section-title {
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 16px;
+    margin-top: 24px;
+}

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Histórico</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        .history-item {
+            display: flex;
+            align-items: center;
+            padding: 12px 0;
+            border-bottom: 1px solid var(--background-light);
+            cursor: pointer;
+        }
+        .history-item:last-child {
+            border-bottom: none;
+        }
+        .history-icon-wrapper { 
+            background-color: var(--background-light); 
+            padding: 12px; 
+            border-radius: 10px; 
+            margin-right: 16px; 
+        }
+        .history-icon { font-size: 28px; color: var(--text-color); }
+        .history-content { flex-grow: 1; }
+        .history-date { font-weight: bold; margin: 0; }
+        .history-data { color: var(--text-secondary); font-size: 14px; margin: 0; }
+        .arrow-icon { font-size: 16px; color: var(--text-secondary); }
+    </style>
+</head>
+<body>
+    <div class="app-bar">
+        <i class="fas fa-arrow-left back-icon" onclick="history.back()"></i>
+        <div class="title">Histórico</div>
+    </div>
+
+    <div class="screen-container">
+        <h2 class="section-title" style="margin-top: 0;">Simulações</h2>
+        
+        <div class="history-item" onclick="alert('Detalhes da simulação 20/Julho')">
+            <div class="history-icon-wrapper"><i class="fas fa-history history-icon"></i></div>
+            <div class="history-content">
+                <p class="history-date">20 de Julho de 2024</p>
+                <p class="history-data">Consumo: 1200 kWh | Emissão: 500 kg CO2</p>
+            </div>
+            <i class="fas fa-chevron-right arrow-icon"></i>
+        </div>
+
+        <div class="history-item" onclick="alert('Detalhes da simulação 15/Julho')">
+            <div class="history-icon-wrapper"><i class="fas fa-history history-icon"></i></div>
+            <div class="history-content">
+                <p class="history-date">15 de Julho de 2024</p>
+                <p class="history-data">Consumo: 1150 kWh | Emissão: 480 kg CO2</p>
+            </div>
+            <i class="fas fa-chevron-right arrow-icon"></i>
+        </div>
+
+        <div class="history-item" onclick="alert('Detalhes da simulação 10/Julho')">
+            <div class="history-icon-wrapper"><i class="fas fa-history history-icon"></i></div>
+            <div class="history-content">
+                <p class="history-date">10 de Julho de 2024</p>
+                <p class="history-data">Consumo: 1300 kWh | Emissão: 550 kg CO2</p>
+            </div>
+            <i class="fas fa-chevron-right arrow-icon"></i>
+        </div>
+        
+        <div class="history-item" onclick="alert('Detalhes da simulação 05/Julho')">
+            <div class="history-icon-wrapper"><i class="fas fa-history history-icon"></i></div>
+            <div class="history-content">
+                <p class="history-date">5 de Julho de 2024</p>
+                <p class="history-data">Consumo: 1250 kWh | Emissão: 520 kg CO2</p>
+            </div>
+            <i class="fas fa-chevron-right arrow-icon"></i>
+        </div>
+
+    </div>
+
+    <div class="bottom-nav">
+        <div class="nav-item">
+            <i class="fas fa-home"></i>
+            <span>Início</span>
+        </div>
+        <div class="nav-item">
+            <i class="fas fa-chart-bar"></i>
+            <span>Resultados</span>
+        </div>
+        <div class="nav-item active">
+            <i class="fas fa-history"></i>
+            <span>Histórico</span>
+        </div>
+        <div class="nav-item">
+            <i class="fas fa-cog"></i>
+            <span>Configurações</span>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
